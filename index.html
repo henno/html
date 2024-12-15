@@ -191,8 +191,28 @@ const track = {
     </template>
 
     <script>
-        // Shipping tracking initialization
-        console.log('Tracking system initialized');
+    // Function to highlight ships based on capacity
+    function highlightLargeShips() {
+        const capacityThreshold = 15000;
+        const tableRows = document.querySelectorAll('tbody tr');
+        
+        for (let row of tableRows) {
+            const capacityCell = row.querySelector('td:nth-child(2)');
+            const capacity = parseInt(capacityCell.textContent.replace(',', ''));
+            
+            if (capacity > capacityThreshold) {
+                row.classList.add('highlight');
+            } else {
+                row.classList.remove('highlight');
+            }
+        }
+    }
+
+    // Add click handler to fleet info section
+    const fleetSection = document.querySelector('.fleet-info');
+    if (fleetSection) {
+        fleetSection.addEventListener('click', highlightLargeShips);
+    }
     </script>
 </body>
 </html>
