@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Global Shipping Portal</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .ship-tracker { background: #f0f8ff; }
+        .highlight { background: yellow; }
+    </style>
+</head>
+<body>
+    <!-- Main shipping information portal -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#vessels">Vessels</a></li>
+                <li><a href="#tracking">Tracking</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Global Maritime Solutions</h1>
+            <h2>Your Cargo, Our Priority</h2>
+            <h3>24/7 Worldwide Shipping</h3>
+        </section>
+
+        <article class="ship-tracker">
+            <h2>Ship Tracking System</h2>
+            <div class="tracker-container">
+                <strong>Live Vessel Tracking</strong>
+                <p>Track the world's largest container ships in real-time.</p>
+                <figure>
+                    <canvas id="shipMap" width="800" height="400"></canvas>
+                    <figcaption>Live Maritime Traffic Map</figcaption>
+                </figure>
+            </div>
+        </article>
+
+        <blockquote>
+            "The best shipping company we've worked with" - <cite>Maritime Weekly</cite>
+        </blockquote>
+
+        <hr>
+
+        <section class="fleet-info">
+            <h2>Fleet Information</h2>
+            <table>
+                <caption>Our Fleet Statistics</caption>
+                <colgroup>
+                    <col style="background-color: #f0f0f0">
+                    <col>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>Vessel Name</th>
+                        <th>Capacity (<abbr title="Twenty-foot Equivalent Unit">TEU</abbr>)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Ever Given</td>
+                        <td>20,124</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2">Updated <small>2023</small></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+        <section class="multimedia">
+            <h2>Media Gallery</h2>
+            <picture>
+                <source media="(min-width: 800px)" srcset="large-ship.jpg">
+                <img src="small-ship.jpg" alt="Container vessel">
+            </picture>
+
+            <video controls>
+                <source src="port-operations.mp4" type="video/mp4">
+                Your browser doesn't support video playback.
+            </video>
+
+            <audio controls>
+                <source src="harbor-sounds.mp3" type="audio/mpeg">
+                Your browser doesn't support audio playback.
+            </audio>
+        </section>
+
+        <pre><code>
+// Vessel tracking code
+const track = {
+    latitude: <kbd>40.7128°N</kbd>,
+    longitude: <kbd>74.0060°W</kbd>
+};
+        </code></pre>
+
+        <section class="documentation">
+            <h2>Technical Documentation</h2>
+            <p>Ship specifications include <mark>advanced navigation systems</mark> and <sub>CO2</sub> emission controls with <sup>TM</sup> technology.</p>
+            <span class="note">Note: </span><i>All vessels are certified</i>
+
+            <del>Old tracking system</del>
+            <ins>New GPS tracking system</ins>
+        </section>
+
+        <details>
+            <summary>Shipping Routes</summary>
+            <ol>
+                <li>Asia-Pacific Route</li>
+                <li>Trans-Atlantic Route</li>
+            </ol>
+        </details>
+
+        <dialog id="shipmentModal">
+            <p>Your shipment is confirmed!</p>
+            <button onclick="closeModal()">Close</button>
+        </dialog>
+
+        <form action="/submit-shipping" method="post">
+            <fieldset>
+                <legend>Shipping Details</legend>
+                <label for="cargo">Cargo Type:</label>
+                <input type="text" id="cargo" name="cargo">
+
+                <label for="destination">Destination:</label>
+                <select id="destination" name="destination">
+                    <optgroup label="Asia">
+                        <option value="shanghai">Shanghai</option>
+                    </optgroup>
+                </select>
+
+                <textarea id="notes" name="notes" placeholder="Additional Notes"></textarea>
+            </fieldset>
+        </form>
+
+        <svg width="100" height="100">
+            <circle cx="50" cy="50" r="40" stroke="blue" fill="none"/>
+        </svg>
+
+        <section class="external-content">
+            <h2>Maps and Videos</h2>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=YOUR_MAP_URL"
+                width="600"
+                height="450"
+                style="border: none;"
+                allowfullscreen=""
+                loading="lazy">
+            </iframe>
+
+            <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/LtT4tdSn1IA"
+                style="border: none;"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+        </section>
+
+        <section class="system-messages">
+            <h2>System Messages</h2>
+            <p>Kui süsteem tuvastab laeva, kuvatakse järgmine teade:</p>
+            <samp>Vessel "Nordic Star" detected at coordinates: 40.7128°N, 74.0060°W</samp>
+
+            <p>Veateade näeb välja selline:</p>
+            <samp>Error 404: Ship tracking data not found</samp>
+        </section>
+    </main>
+
+    <footer>
+        <address>
+            Global Shipping HQ<br>
+            123 Harbor Street<br>
+            Rotterdam, Netherlands
+        </address>
+    </footer>
+
+    <template id="shipping-card">
+        <div class="card">
+            <h4>Shipping Details</h4>
+        </div>
+    </template>
+
+    <script>
+        // Shipping tracking initialization
+        console.log('Tracking system initialized');
+    </script>
+</body>
+</html>
